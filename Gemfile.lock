@@ -108,6 +108,8 @@ GEM
     mini_portile2 (2.8.5)
     minitest (5.22.2)
     msgpack (1.7.2)
+    net-http (0.4.1)
+      uri
     net-imap (0.4.10)
       date
       net-protocol
@@ -211,6 +213,7 @@ GEM
     timeout (0.4.1)
     tzinfo (1.2.11)
       thread_safe (~> 0.1)
+    uri (0.10.0)
     web-console (4.2.1)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -229,14 +232,16 @@ GEM
     zeitwerk (2.6.13)
 
 PLATFORMS
-  arm64-darwin-20
+  arm64-darwin-21
 
 DEPENDENCIES
   bootsnap (>= 1.4.2)
   byebug
   capybara (>= 2.15)
+  date (~> 3.3)
   jbuilder (~> 2.7)
   listen (~> 3.2)
+  net-http
   puma (~> 4.1)
   rails (~> 6.0.6, >= 6.0.6.1)
   react-rails (= 3.2)
@@ -246,7 +251,9 @@ DEPENDENCIES
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3 (~> 1.4)
+  timeout (~> 0.4.1)
   tzinfo-data
+  uri (= 0.10.0)
   web-console (>= 3.3.0)
   webdrivers
 
@@ -254,4 +261,4 @@ RUBY VERSION
    ruby 2.7.5p203
 
 BUNDLED WITH
-   2.4.3
+   2.4.22

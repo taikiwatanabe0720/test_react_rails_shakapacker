@@ -17,6 +17,8 @@ gem 'jbuilder', '~> 2.7'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+gem 'net-http'
+gem 'uri', '0.10.0'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
@@ -52,3 +54,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "shakapacker", "= 7.2"
 
 gem "react-rails", "= 3.2"
+
+gem "date", "~> 3.3"
+
+gem "timeout", "~> 0.4.1"

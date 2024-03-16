@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
+import PostCreate from './PostCreate';
 
 const PostIndex = (props) => {
   const [posts, setPosts] = useState([]);
@@ -30,7 +31,8 @@ const PostIndex = (props) => {
 
   return (
     <React.Fragment>
-      <div>
+      <h1>Posts</h1>
+      {viewType === 'index' && <div>
         <button onClick={() => fetchData()}>fetchボタン</button>
         <button onClick={() => postData()}>postボタン</button>
         <table>
@@ -56,8 +58,11 @@ const PostIndex = (props) => {
         </table>
         <br />
         <button onClick={() => setViewType('new')}>New Post</button>
-        <p>aaa</p>
       </div>
+      }
+      {viewType === 'new' &&
+        <PostCreate />
+      }
     </React.Fragment>
   )
 }

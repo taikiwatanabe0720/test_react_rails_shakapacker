@@ -22,11 +22,10 @@ const PostCreate = (props) => {
         }
       }
     )
-    console.log("============", JSON.stringify(res))
   }
 
   useEffect(() => {
-    setPosts(props.posts);
+    // setPosts(props.posts);
   }, [])
 
   return (
@@ -35,9 +34,14 @@ const PostCreate = (props) => {
       <input value={title} onChange={(e) => setTitle(e.target.value)} />
       <h3>Comment</h3>
       <input value={comment} onChange={(e) => setComment(e.target.value)} />
+      <div>
+        <button onClick={() => postData()}>postボタン</button>
+      </div>
+      <p style={{color: 'red'}}>{error}</p>
 
-      <button onClick={() => postData()}>postボタン</button>
-      <p style='color: red;'>{error}</p>
+      <div>
+        <button onClick={() => console.log("前の画面に戻るようにする")}>backボタン</button>
+      </div>
     </React.Fragment>
   )
 }
